@@ -1,6 +1,7 @@
 find_package(Qt5 5.2.0 COMPONENTS Widgets OpenGL Network Sql PrintSupport REQUIRED)
 
 find_package(TypeSafe REQUIRED)
+find_package(DelaunayTriangulation REQUIRED)
 
 # Export library
 add_library(librepcb_common
@@ -161,4 +162,5 @@ target_link_libraries(librepcb_common
     Qt::Sql
     Qt::PrintSupport
     TypeSafe::TypeSafe
+    DelaunayTriangulation::DelaunayTriangulation
 )
