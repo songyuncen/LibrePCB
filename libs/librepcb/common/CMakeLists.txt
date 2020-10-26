@@ -5,6 +5,11 @@ find_package(DelaunayTriangulation REQUIRED)
 find_package(Optional REQUIRED)
 find_package(Sexpresso REQUIRED)
 
+# Enable Qt MOC/UIC/RCC
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+
 # Export library
 add_library(librepcb_common
     # Forms
