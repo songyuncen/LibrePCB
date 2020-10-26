@@ -161,7 +161,7 @@ add_library(librepcb_common
     #    # Resources TODO
     #    ../../../img/images.qrc
 )
-target_include_directories(librepcb_common PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+target_include_directories(librepcb_common PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../..")
 target_link_libraries(librepcb_common
     Qt::Widgets
     Qt::OpenGL
