@@ -4,6 +4,7 @@ find_package(TypeSafe REQUIRED)
 find_package(DelaunayTriangulation REQUIRED)
 find_package(Optional REQUIRED)
 find_package(Sexpresso REQUIRED)
+find_package(QuaZip REQUIRED)
 
 # Enable Qt MOC/UIC/RCC
 set(CMAKE_AUTOMOC ON)
@@ -172,6 +173,7 @@ target_link_libraries(librepcb_common
     DelaunayTriangulation::DelaunayTriangulation
     Optional::Optional
     Sexpresso::Sexpresso
+    QuaZip::QuaZip
 )
 
 # Alias to namespaced variant
