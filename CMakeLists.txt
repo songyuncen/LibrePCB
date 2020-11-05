@@ -44,6 +44,7 @@ find_package(QuaZip REQUIRED)
 
 # Add libs
 add_subdirectory(libs/librepcb/common)
+add_subdirectory(libs/librepcb/library)
 
 # Add apps
 #add_subdirectory(apps/librepcb)

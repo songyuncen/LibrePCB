@@ -1,10 +1,10 @@
 # Enable Qt MOC/UIC/RCC
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTORCC ON)
+#set(CMAKE_AUTORCC ON)
 
 # Export library
-add_library(librepcb_common
+add_library(librepcb_common STATIC
     # Forms
     dialogs/aboutdialog.ui
     dialogs/boarddesignrulesdialog.ui
