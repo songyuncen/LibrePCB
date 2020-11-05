@@ -32,6 +32,16 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Configure module path
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 
+# Find required Qt packages
+find_package(Qt5 5.2.0 COMPONENTS Widgets OpenGL Network Sql PrintSupport REQUIRED)
+
+# Find third party libraries
+find_package(TypeSafe REQUIRED)
+find_package(DelaunayTriangulation REQUIRED)
+find_package(Optional REQUIRED)
+find_package(Sexpresso REQUIRED)
+find_package(QuaZip REQUIRED)
+
 # Add libs
 add_subdirectory(libs/librepcb/common)
 
