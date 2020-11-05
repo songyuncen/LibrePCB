@@ -49,6 +49,7 @@ add_subdirectory(libs/librepcb/project)
 add_subdirectory(libs/librepcb/workspace)
 add_subdirectory(libs/librepcb/projecteditor)
 add_subdirectory(libs/librepcb/libraryeditor)
+add_subdirectory(libs/librepcb/librarymanager)
 
 # Add apps
 #add_subdirectory(apps/librepcb)
