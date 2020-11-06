@@ -166,6 +166,7 @@ target_link_libraries(librepcb_common
     Optional::Optional
     Sexpresso::Sexpresso
     QuaZip::QuaZip
+    MuParser::MuParser
 )
 
 # Alias to namespaced variant
