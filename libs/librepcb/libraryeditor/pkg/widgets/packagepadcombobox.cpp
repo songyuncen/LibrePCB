@@ -110,9 +110,7 @@ void PackagePadComboBox::updatePads() noexcept {
 
   if (mPackage) {
     for (const PackagePad& pad : mPackage->getPads()) {
-      if ((!mFootprint) || (!mFootprint->getPads().contains(pad.getUuid()))) {
         mComboBox->addItem(*pad.getName(), pad.getUuid().toStr());
-      }
     }
   }
 

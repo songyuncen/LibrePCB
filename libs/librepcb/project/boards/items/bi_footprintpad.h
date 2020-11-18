@@ -118,7 +118,9 @@ private:
   // General
   BI_Footprint& mFootprint;
   const library::FootprintPad* mFootprintPad;
+  /// nullptr if not connected!
   const library::PackagePad* mPackagePad;
+  /// nullptr if not connected!
   ComponentSignalInstance* mComponentSignalInstance;
   QMetaObject::Connection mHighlightChangedConnection;
   QMetaObject::Connection mNetSignalNameChangedConnection;

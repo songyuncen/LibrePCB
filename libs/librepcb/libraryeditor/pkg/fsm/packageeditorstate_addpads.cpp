@@ -58,7 +58,7 @@ PackageEditorState_AddPads::PackageEditorState_AddPads(Context& context,
     mCurrentGraphicsItem(nullptr),
     mPackagePadComboBox(nullptr),
     mLastPad(
-        Uuid::createRandom(), Point(0, 0), Angle::deg0(),
+        Uuid::createRandom(), tl::nullopt, Point(0, 0), Angle::deg0(),
         FootprintPad::Shape::ROUND,  // Commonly used pad shape
         PositiveLength(2500000),  // There is no default/recommended pad size
         PositiveLength(1300000),  // -> choose reasonable multiple of 0.1mm
@@ -233,10 +233,11 @@ bool PackageEditorState_AddPads::startAddPad(const Point& pos) noexcept {
   try {
     mStartPos = pos;
     mContext.undoStack.beginCmdGroup(tr("Add footprint pad"));
-    mCurrentPad.reset(new FootprintPad(
-        mLastPad.getPackagePadUuid(), pos, mLastPad.getRotation(),
-        mLastPad.getShape(), mLastPad.getWidth(), mLastPad.getHeight(),
-        mLastPad.getDrillDiameter(), mLastPad.getBoardSide()));
+    mCurrentPad.reset(
+        new FootprintPad(Uuid::createRandom(), mLastPad.getPackagePadUuid(),
+                         pos, mLastPad.getRotation(), mLastPad.getShape(),
+                         mLastPad.getWidth(), mLastPad.getHeight(),
+                         mLastPad.getDrillDiameter(), mLastPad.getBoardSide()));
     mContext.undoStack.appendToCmdGroup(new CmdFootprintPadInsert(
         mContext.currentFootprint->getPads(), mCurrentPad));
     mEditCmd.reset(new CmdFootprintPadEdit(*mCurrentPad));
